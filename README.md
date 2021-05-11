@@ -1,4 +1,7 @@
 #### 20210511}(화) 작업내역
+- 로렘 입숨 한글 http://guny.kr/stuff/klorem/#/table-html
+- 로렘 입숨 영어 http://loremipsum.io
+- URL 경로(path): /루트, /test/html5.html
 - html5의 레이아웃 구조 제작합니다.
 - 서버(응답하는프로그램=response) = 아파치서버, 톰캣서버
 - 클라이언트(요청하는프로그램=request) = web browser
