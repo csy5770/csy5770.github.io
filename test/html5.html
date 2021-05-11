@@ -1,5 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
+
+    <!-- HTML5 레이아웃 구조에 사용된 태그
+    header, nav, section, article, aside, footer
+     -->
+     <style>
+        /* css : cascade style sheet 계층형 스타일 표 */
+        header, nav, section, article, aside, footer 
+       {border:1px dotted black;
+       }
+    header > h1, footer > h1 { text-align: center; }
+    nav {display: block; height: 60px; }
+    nav > ul > li {
+        float:left; margin-right: 20px;
+    }
+    div.contents {
+        /* 내부의 컨텐츠 기준되는 외부 요소에 관계형 포지션 추가 */
+    position: relative;
+    overflow: hidden;
+    }
+    section { 
+        width:79%; display: inline-block;
+        }
+   section > article {
+       margin: 10px 30px;
+       border: 1px solid skyblue;
+       }
+    aside { 
+        width:20%; display: inline-block;
+        height: 100%;
+        right: 0px;
+        position: absolute;
+            }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,38 +52,6 @@
     </style>
 </head>
 <body>
-    <!-- HTML5 레이아웃 구조에 사용된 태그
-    header, nav, section, article, aside, footer
-     -->
-     <style>
-         /* css : cascade style sheet 계층형 스타일 표 */
-         header, nav, section, article, aside, footer 
-        {border:1px dotted black;
-        }
-     header > h1, footer > h1 { text-align: center; }
-     nav {display: block; height: 60px; }
-     nav > ul > li {
-         float:left; margin-right: 20px;
-     }
-     div.contents {
-         /* 내부의 컨텐츠 기준되는 외부 요소에 관계형 포지션 추가 */
-     position: relative;
-     overflow: hidden;
-     }
-     section { 
-         width:79%; display: inline-block;
-         }
-    section > article {
-        margin: 10px 30px;
-        border: 1px solid skyblue;
-        }
-     aside { 
-         width:20%; display: inline-block;
-         height: 100%;
-         right: 0px;
-         position: absolute;
-             }
-     </style>
      <header>
          <h1>header</h1>
      </header>
