@@ -39,16 +39,20 @@
         document.write(arrays);//pop을 하기 전 배열 값
         document.write('<br>');
         document.write(arrays.pop());//arrays에서 자료를 뽑아냄. 내용삭제.
+        // pop 제일 마지막에 입력된 ==index가 제일 마지막인값이 출력
         document.write('<br>');
         document.write(arrays);//pop 이후의 배열값
         document.write('<br>');
         document.write(arrays.push(1000));//arrays에 자료입력
+        //push 인덱스값이 제일 마지막인 자료 다음에 입력이 됨
         document.write('<br>');
         document.write(arrays);
         document.write('<br>');
-        document.write(arrays.join('!!'));
+        document.write(arrays.join('!!'));//arrays에 자료가 입력되지는 않음.
         document.write('<br>');
         document.write(arrays);
+        document.write('<br>');
+        document.write(arrays.reverse());//sort 오름차순, reverse 내림차순
         document.write('<br>');
         // 날짜 처리 함수
         var date = new Date;//new 키워드(예약어)로 함수형변수 생성
