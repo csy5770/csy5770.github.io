@@ -26,7 +26,26 @@
         </tr>
     </table>
     <div id="one">헬로 자바스크립트</div>
+    <input type="text" name="name" id="name" value="테스트">
+    <button onclick="checkValue()">입력값 확인</button>
     <script>
+        // 여러개의 element 선택
+        var names = document.getElementById('name');
+        // 변수의 영역
+        // function스코프변수 예약어 var, 블럭scope변수예약어 let, const
+        var i = 10;
+        var i2 = 0;
+        if(1>5) {
+            let i2 = 100;
+        }else{
+            let i2 = 200;//let 변수는 {블럭} 영역 안에서만 효력이 있음.
+        }
+        function test(params) {
+            i2 = 200;//var 사용하면 변수 재정의된 변수는 출력불가.
+        }
+        test(1);
+        document.write(i2);
+        document.write('<hr>');
         var arrays = [10, 20, 30, 40, 50];
         //반복문2: while 문은 for문보다는 조금사용, 잘못하면 무한반복
         //while문 주로 IoT에서 많이 사용합니다. 온도센서 값 입력할 때 무한반복
