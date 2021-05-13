@@ -1,3 +1,8 @@
+#### 20210513(목) 작업내역
+- 애니데스크 : 팀뷰어 대신 애니데스크 사용
+- html5.html, css.html, js,html 여기까지
+- jQuery 기본구조만 실습했습니다.
+
 #### 20210512 (수) 작업내역
 - git clone 으로 프로젝트를 가져온 경우 아래 내용을 추가해야 함.
 - git config --list 확인에서 user.name, user.email 없으면 아래추가
