@@ -16,15 +16,25 @@
 <link rel="stylesheet" href="/home/css/mobile.css">
 <style>
 /*모바일용 메인페이지 스타일 지정(아래)  */
-/* 공통영역 */
-body { /*body. a 태그에는 적용이 안됩니다. */
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 16px !important; /* important 중요, body 폰트 크기는 16px 무조건*/
-    letter-spacing: -1px !important;
-    color: #444 !important;
-    word-wrap: break-word !important;
-    line-height: 1 !important; 
+/* 로고영역 */
+.header_area h1 {
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 3px 0px 0px; /*3px(상하),0px(좌),0px(우)*/
 }
+.header_area h1 a {
+    /*로고는 이미지인데 글을 더한 이유는 웹 접근성 때문에 추가(스크린리더:시각장애인용유틸리티) */
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background: url(./img/logo.png); /* css3는 함수를 지원함.*/
+    background-size: 50px 60px !important; /* 백그라운드 이미지 사이즈 가로 50, 세로가 60*/
+    background-position: center center !important; /*이미지 위치가 가로 가운데, 세로도 가운데*/
+    text-indent: -9999px; /* 들여쓰기(indent) 이미지만 보이고, 글자는 숨기기 위치*/
+}
+/* //로고영역 */
 </style>
 <script>
 $(document).ready(function() {
