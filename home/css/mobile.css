@@ -270,7 +270,7 @@ li.imglist2 {
 	vertical-align: top;/* img하고 다른태그사용시 다른 태그의 세로 정렬 */
 }
 /* //슬라이드영역 */
-/* 겔러리최근게시물영역 */
+/* 갤러리최근게시물영역 */
 .about_area h2 {
 	font-size: 20px;
 	padding: 27px 0px 25px;/* 27상하, 0좌, 25우 */
@@ -312,7 +312,7 @@ li.imglist2 {
 	border-top: 2px solid #333;
 	color: #666;
 }
-/* //겔러리최근게시물영역 */
+/* //갤러리최근게시물영역 */
 /* 공지사항최근게시물영역 */
 .app_line {display: none;} /* 태블릿,PC 전용 콘텐츠입니다. */
 .appbbs_area {
