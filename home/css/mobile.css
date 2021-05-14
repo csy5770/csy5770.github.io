@@ -74,7 +74,7 @@ header {/*태그선택자*/
     background-size: 50px 60px !important; /* 백그라운드 이미지 사이즈 가로 50, 세로가 60*/
     background-position: center center !important; /*이미지 위치가 가로 가운데, 세로도 가운데*/
     text-indent: -9999px; /* 들여쓰기(indent) 이미지만 보이고, 글자는 숨기기 위치*/
-    overfolw: hidden;
+    overflow: hidden;
 }
 /* //로고영역 */
 
@@ -309,7 +309,7 @@ li.imglist2 {
     color: #666;
 }
 .place_list li .view {
-    padding-botom: 10px;
+    padding-bottom: 10px;
     margin:0 0 30px;
     display: inline-block;
     padding-top: 5px;
