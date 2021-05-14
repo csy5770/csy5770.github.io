@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /*모바일용 메인페이지 스타일 지정(아래)  */
 /* 공통영역 */
@@ -49,7 +49,7 @@ header {/*태그선택자*/
     /*z-index를 200으로 주는 이유는 슬라이드 이미지 겹칠 때 메뉴가 다른 태그에 가려지는 것을 방지  */
     background-color: rgba(0,0,0,0.5);/* a는 alpha : 투명도 0.5 = 50% */
     position: absolute; /* relative 다른태그와 관계(기본값), absolute는 위치에서 다른태그에 영향을 받지 않음*/
-    left: 0;, top:0;
+    left: 0; top:0;
     width: 100%;
 }
 .box_inner {
