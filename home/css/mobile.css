@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 /* 모바일용 메인페이지 스타일 지정(아래) */
 /* 공통영역 */
-body { /* body a 태그엔 적용이 않됩니다. */
+body { /* body a 태그엔 적용이 안됨. */
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 16px !important;/* important 중요함, body 폰트크기는 무조건 고정 */
     letter-spacing: -1px !important;
     color: #444 !important;
-    word-wrap: break-word !important;/* 워드랩,줄바꿈할때 책
-	가방(X) 단어가 분리가 않되면서(단어단위로) 줄바꿈이 됩니다. */
+    word-wrap: break-word !important;/* 워드랩,줄바꿈할때 단어가 분리 되지 않으며 (단어단위로) 줄바꿈이 됨. */
 	line-height: 1 !important;/* 단위 1이면 16px 입니다. */
 }
 dl, ol, ul {margin-bottom: 0 !important;}
@@ -64,7 +63,7 @@ header { /* 태그선택자 */
 	padding: 3px 0px 0px;/* 3px(상하) 0px(좌) 0px(우) */
 }
 .header_area h1 a {
-	/* 로고는 이미지인데 글을 더한 이유는 웹접근성 때문에 추가(스크린리더:시각장애인용유틸리티)  */
+	/* 로고는 이미지인데 글을 더한 이유는 웹접근성 때문에 추가(스크린리더:시각장애인용유틸프로그램)  */
 	display: inline-block;
 	width: 150px;
 	height: 80px;
@@ -91,7 +90,7 @@ header { /* 태그선택자 */
 	position: absolute;
 }
 .openMOgnb span {
-	box-sizing: border-box;/* 박스크기를 테두리까지 크기로 고정 */
+	box-sizing: border-box;/* 박스크기를 테두리까지 크기로 고정(자주씀, 중요) */
 	display: block;
 	width: 25px; height: 3px;
 	margin-bottom: 4px;
@@ -343,7 +342,7 @@ li.imglist2 {
 footer {
 	border-top: 1px solid #ddd;
 }
-.foot_area { /* 모바일에서는 의미없고, 테블릿이상에서 의미있는 스타일 */
+.foot_area { /* 모바일에서는 의미없고, 태블릿 이상에서 의미있는 스타일 */
 	box-sizing: border-box;
 	padding: 0px 20px 90px;
 	position: relative;/* relative가 있다는 것은 foot_area안쪽에 태그의 기준으로 사용하다는 의미 */
@@ -396,7 +395,7 @@ footer {
 }
 .snslink li {
 	margin-left: 30px;
-	float: left;/* 리스트li태그의 세로배치를 가로배치로 변경할때 사용 */
+	float: left;/* 리스트, li태그의 세로배치를 가로배치로 수정할때 사용 */
 }
 .snslink li a {
 	display: block;
@@ -419,7 +418,7 @@ footer {
 	bottom: 100px;
 	text-align: center;
 	background: none;
-	z-index: 100;/* 슬라이드 이미지 200 보다는 아래이기때문에 겹치면 않보임. */
+	z-index: 100;/* 슬라이드 이미지 200 보다는 아래이기때문에 출력불가. */
 }
 .to_top a {
 	display: block;
