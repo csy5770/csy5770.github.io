@@ -16,67 +16,46 @@
 <!-- 여기서 부터 사용자 정의형 스타일 + 스크립트 추가(아래) -->
 <link rel="stylesheet" href="/home/css/mobile.css">
 <script src="/home/js/main.js"></script>
+<!-- 메인슬라이드 코어 임포트 -->
+<script src="/home/js/slidemain.js"></script>
 <style>
 /* 테블릿용 메인페이지 스타일 지정(아래) */
 
 </style>
 <script>
-	var slideNum = 0; //슬라이드 인덱스 초기값 선언
-var slideAuto = null; //값이 null은 없는것, '' 공백이 값
-// on | off 이런 역할을 하는 값을 스위치 | 플래그(깃발) 변수라고 합니다.
-// 함수선언(아래)
-function play_w(directw) {// 좌우로 슬라이드 되는 함수선언(왼쪽|오른쪽)
-	//아래 3개의 조건중에 1개는 무조건 실행되는 구조
-	if(directw=='right') {
-		slideNum = slideNum + 1;//슬라이드 번호 증가
-		if(slideNum>2) {slideNum = 0;} // 슬라이드 이미지가 3개일 때로 고정.
-	}else if(directw=='left') {
-		slideNum = slideNum = 1;//슬라이드 번호 감소
-		if(slideNum<0) {slideNum = 2;}//순서대로 무한 반복을 명시
-	} else {
-		slideNum - directw; // string으로 형 변환
-	}
-
-	//위에서 선언한 함수|변수
-	// li 태그에서 클래스가 seq인것 3개를 반복(each 함수로 3번반복)
-	// 결과는 모든 슬라이드 버튼을 작은 정원으로 바꾸는 명령
-	$('.rollingbtn').find('li.seq a').each(function(){
-		$('li.seq a img').attr('src',$('li.seq a img').attr('src').replace('_on.png','_off.png'));
-	});
-	// 아래 결과는 현재 선택 된 슬라이드 이미지만 _on.png 타원으로 replace, 바꾸는 명령
-	$('li.butt'+slideNum+' a img').attr('src',$('li.butt'+slideNum+' a img').attr('src').replace('_off.png','_on.png'));
-	// slideNum조건 실행, 아래 3가지중 1가지는 항상 실행됨
-	if(slideNum == 0) {
-		//슬라이드 인덱스가 0번일 때 li 태그를 1초간 서서히 사라지게 처리
-		$('.viewImgList li.imglist1').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist2').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist0').animate({'opacity':1},1000);//서서히 나타나기
-	}else if(slideNum ==1 ) {
-		$('.viewImgList li.imglist0').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist2').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist1').animate({'opacity':1},1000);//서서히 나타나기
-	}else if(slideNum ==2 ) {
-		$('.viewImgList li.imglist0').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist1').animate({'opacity':0},1000);//서서히 사라지기
-		$('.viewImgList li.imglist2').animate({'opacity':1},1000);//서서히 나타나기
-	}
-	// 플래그(깃발) true(자동슬라이드), false(슬라이드 멈춤)
-	if(slideAuto) {
-		clearTimeout(slideAuto);//play w함수 실행 중지함.
-	}
-	slideAuto = setTimeout('play_w("right")',3000);//3초 단위로 play_w('right') 실행 명령
-} //play_w 함수 끝
+// 메인페이지 전용 슬라이드 호출 부분
 $(document).ready(function() {
 	//위에서 선언한 함수|변수 사용(아래)
 	//여기서 함수호출(실행)
-	var slideAuto = setTimeout('play_w("right")', 3000);//3초마다 play_w 함수 실행
-		var slidePlayHide = setTimeout(function(){
-			$('.rollplay').css("display", 'none');
-		},3000); //3초후에 rollplay 클래스 영역을 숨김
+	slideAuto = setTimeout('play_w("right")', 3000);//3초마다 play_w함수 실행
+	var slidePlayHide = setTimeout(function(){
+		$('.rollplay').css('display','none');
+	},3000);//3초 후에 rollplay클래스 플레이버튼 영역을 숨김
+	// 3개의 슬라이드 버튼 클릭 액션처리
+	$('.rollstop a').click(function(){
+		// this는 클릭한 본인 태그를 말합니다.
+		$(this).parent().hide();//현재 stop버튼 숨김.
+		$('.rollplay').css('display','inline-block');
+		if(slideAuto) {
+			clearTimeout(slideAuto);//slideAuto변수가 없다면, play_w함수를 실행 중지.
+		}
+	});
+	$('.rollplay a').click(function(){
+		$(this).parent().hide();// a태그의 부모 rollplay영역 입니다.
+		$('.rollstop').css('display','inline-block');
+		play_w('right');//3초마다 슬라이드 이미지 액션이 발생합니다.
 
-		$('.rollstop').click(function(){});
-		$('.rollplay a').click(function(){});
-		$('.rollingbtn li.seq a').each(function(){});
+	});
+	$('.rollingbtn li.seq a').each(function(index){
+		$(this).click(function(){
+			$('.rollplay').hide();
+			$('.rollstop').css('display','inline-block');
+			if(slideAuto) {
+				clearTimeout(slideAuto);//슬라이드 중지
+			}
+			play_w(index);//슬라이드 재생 : 단 시작위치는 클릭한 index부터 무한반복
+		});
+	});
 });
 </script>
 </head>
@@ -120,7 +99,7 @@ $(document).ready(function() {
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
                                 <li><a href="board_list.html">공지사항</a></li>
-                                <li><a href="board_list.html">갤러리게시판</a></li>
+                                <li><a href="board_list.html">겔러리게시판</a></li>
                             </ul>
                         </div>
 					</li>
@@ -166,6 +145,7 @@ $(document).ready(function() {
                 <!-- 슬라이드버튼영역 -->
                 <div class="rollbtnArea">
                     <ul class="rollingbtn">
+						<!-- butt0 a img -->
                         <li class="seq butt0"><a href="#butt"><img src="./img/btn_rollbutt_on.png" alt="1번" /></a></li>
                         <li class="seq butt1"><a href="#butt"><img src="./img/btn_rollbutt_off.png" alt="2번" /></a></li>
                         <li class="seq butt2"><a href="#butt"><img src="./img/btn_rollbutt_off.png" alt="3번" /></a></li>
@@ -180,7 +160,7 @@ $(document).ready(function() {
 	
 		<!-- 갤러리최근게시물영역 -->
 		<div class="about_area">
-			<h2>갤러리 최근 게시물 <b>TOP 3</b></h2>
+			<h2>겔러리 최근 게시물 <b>TOP 3</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<li><a href="#" onclick="$('.popup_base').css('height',$(document).height());$('.contact_pop').show();">
