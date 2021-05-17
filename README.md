@@ -5,6 +5,7 @@
 - RestAPI 서버주소(빅데이터): https://coroname.me/getdata
 
 #### 20210517(월) 작업예정
+- 수업시작전, jsonData 파싱부분에서 append 사용에 2번 반복되는 부분 확인예정.
 - 메인페이지에 자바스크립트(jQuery) 적용.(VS code + HTML5 + CSS + jQuery)
 - jQuery 적용 부분: 메뉴, 슬라이드이미지 3개 처리 : 모바일 메인페이지만 마무리
 - 태블릿 메인 CSS 스타일처리
