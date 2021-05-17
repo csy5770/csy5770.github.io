@@ -217,7 +217,7 @@ ul.viewImgList li {
 	display: none;
 }
 li.imglist0 {
-	position: relative;
+	position: relative;/* 기준위치 */
 	z-index: 50;
 	background: url(../img/slide.jpg) no-repeat;
 }
@@ -225,13 +225,13 @@ li.imglist1 {
 	position: absolute;
 	z-index: 10;
 	left:0; top:0;
-	background: url(../img/slide.jpg) no-repeat;
+	background: url(../img/slide2.jpg) no-repeat;
 }
 li.imglist2 {
 	position: absolute;
 	z-index: 10;
 	left:0; top:0;
-	background: url(../img/slide.jpg) no-repeat;
+	background: url(../img/slide3.jpg) no-repeat;
 }
 .roll_content {
 	position: static;
