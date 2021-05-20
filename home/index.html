@@ -56,7 +56,7 @@ $(document).ready(function(){
 	// 대메뉴1 액션
 	$('.openAll1').mouseover(function(){
 		if( parseInt($('header').css('width')) >=1049) {
-			$('.gnb_depth2_1').stop().fadeIn('slow');//서브메뉴1번 나타나게 처리
+			$('.gnb_depth2_1').stop().fadeIn('fast');//서브메뉴1번 나타나게 처리
 		}
 		isOver1 = true;// false일때 숨기는 조건 <-> true일때 나타나는 조건
 	});
@@ -76,14 +76,23 @@ $(document).ready(function(){
 	// 대메뉴2 액션
 	$('.openAll2').mouseover(function(){
 		if( parseInt($('header').css('width')) >=1049) {
-			$('.gnb_depth2_2').stop().fadeIn('slow');//서브메뉴1번 나타나게 처리
+			$('.gnb_depth2_2').stop().fadeIn('slow');//서브메뉴2번 나타나게 처리
 		}
 		isOver2 = true;// false일때 숨기는 조건 <-> true일때 나타나는 조건
 	});
-	$('.openAll2').mouseout(function(){});
+	$('.openAll2').mouseout(function(){
+		isOver2 = false;
+		setTimeout('goHide2()',200);//서브메뉴 2번 사라짐
+	});
 	// 서브메뉴2 액션
-	$('.gnb_depth2_2').mouseover(function(){});
-	$('.gnb_depth2_2').mouseout(function(){});
+	$('.gnb_depth2_2').mouseover(function(){
+		isOverSub2 = true;//서브메뉴 2번이 나타남.
+		setTimeout('goHide2()',200);
+	});
+	$('.gnb_depth2_2').mouseout(function(){
+		isOverSub2 = false;//서브메뉴 2번이 사라집니다.
+		setTimeout('goHide2()',200);
+	});
 });
 // 메인페이지 전용 슬라이드 호출 부분
 $(document).ready(function() {
