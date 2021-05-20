@@ -17,9 +17,18 @@
 - 스프링프로젝트1개(헬로자바)-test 폴더에서 자바기초를 실습
 - 자바에 익숙해진 후 위 스프링프로젝트를 이용해서 스프링 웹프로젝트를 진행
 
+#### 20210521(금) 작업예정.
+- 모바일 게시판페이지(CRUD) CSS 처리: Create(Update) = board_write.html
+- 반응형 서브페이지들(로그인, 회원가입, 마이페이지).
+- 이클립스 헬로월드 실습.
+
 #### 20210520(목) 작업.
 - 메인페이지 시간이 걸리는 부분(백엔드): 최근갤러리, 최근공지사항
 - 모바일 게시판페이지(CRUD) CSS 처리 : Read(list, viewpage)
+- Read : 리스트형식list.html, Map형식,json형식(key:value)
+- Read-리스트형식(다중Map): board_list.html, 예, 회원리스트(회원목록)
+- Read- 단일형식,json형식(key1:value1,key2:value2, key3:value3...): board_view.html (회원상세보기)
+- 상세보기 페이지 댓글 디자인은 부트스트랩 디자인시(관리자단 작업시) 추가 할 예정.
 - 카멜표기법(낙타등표기법 예: .bbsListTbl), _표기법(예, .bbs_title)
 - href헤르프: hypertext reference (웹문서 참조)
 - 정적(static) 콘텐츠: html, css, js
