@@ -357,7 +357,7 @@ var printPagingList = function(pageVO, target) {
 var printReplyList = function(data, templateData, target) {
 	var template = Handlebars.compile(templateData.html());//템플릿을 태그로 변환
 	var html = template(data);//파싱처리
-	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target안쪽의 자식만지움
+	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target안쪽의 자식만 삭제
 	target.prepend(html);
 };
 	$(document).ready(function(){
