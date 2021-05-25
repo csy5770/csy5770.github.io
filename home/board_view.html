@@ -186,7 +186,7 @@ $(document).ready(function() {
 						</div>
 					  </div>
 					  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-						<button type="button" class="btn btn-warning" id="btn_reply_write" data-toggle="collapse" data-target="#collapseReply">댓글등록</button>
+						<button type="button" class="btn btn-warning" id="btn_reply_write">댓글등록</button>
 					  </div>
 					</div>
 				  </div>
@@ -367,11 +367,7 @@ var printReplyList = function(data, templateData, target) {
 				url:'./board_view.html',//RestAPI URL 입력
 				dataType:'text',
 				success:function(result) {
-					// alert('RestAPI성공');
-					result = [
-						{rno:2,bno:2,reply_text:'두번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345},
-						{rno:1,bno:2,reply_text:'첫번째 댓글입니다.',replyer:'관리자',reg_date:1601234512345}
-					];
+					alert('댓글이 등록 되었습니다');
 					//자바스크립트는 함수기반 구조화된 언어
 					//위 result데이터를 #template에 바인시키는 함수호출(아래)
 					//함수의(인자=argument=매개변수=파라미터)
