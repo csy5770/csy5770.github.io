@@ -3,20 +3,22 @@
 - 피곤할때, 자바|스프링(이클립스-egov전자정부프레임워크개발환경) 기본언어실습진행.
 - 피곤할때, 오라클DB(SQL디벨러퍼개발환경) Ansi-SQL(표준SQL)기본언어실습진행CRUD.
 - 2달째부터(백엔드), 주로 스프링으로 실습이 진행(납품용-이력서포트폴리오용).
-- VS code에서 만든 UI를 JSP로 변경 한 후 스프링웹프로젝트를 진행합니다.
-- 관리자단 AdminLTE적용 - 스프링시간.(회원관리CRUD바로 jsp, 게시판 생성관리 CRUD바로 jsp)
+- VS code에서 만든 UI를 이클립스에서 JSP로 변경 한 후 스프링웹프로젝트를 진행합니다.
 
-#### 20210528(금) 작업예정
-- 관리자단 admin/board_write.html, board_view.html
+#### 20210528(금) 작업예정.
+- 관리자단 admin/board_write.html, board_view.html(댓글Ajax처리)
 - 대시보드 home.html (최근 회원가입정보, 최근 게시물정보)
-- 이클립스로 작업한 html 내용 -> resources 폴더(admin,home,root파일까지)로 배치
+- 관리자단 AdminLTE적용-스프링시간|UI디자인시간 선택 후 아래 작업진행예정
+- (회원관리CRUD-html, 게시판생성관리CRUD-html)
+- 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root파일까지)로 배치
+- 스프링 작업의 시작
 
-#### 20210527(목) 작업
-- admin/board_list.html 작업완료
-- 관리자단 AdminLTE적용.(회원관리CRUD, 게시판CRUD, 대시보드)
-- 관리자단 기본 틀(템플릿) : 공통 UI부분 작업 OK.
-- Crtl+k, Ctrl+0 = 코드 축소(코드구조 확인)
-- Ctrl+k, Ctrl+j = 코드 확대
+#### 20210527(목) 작업.
+- admin/board_list.html 작업OK.
+- 관리자단 AdminLTE적용-UI시간:(게시판CRUD-html, 대시보드-html)
+- 관리자단 기본 틀(템플릿): 공통 UI부분 작업OK.
+- Ctrl+k, Ctrl+0 = 코드 축소 = Ctrl+k+0 (코드구조 확인)
+- Ctrl+k, Ctrl+j = 코드 펼침 = Ctrl+k+j
 
 #### 20210526(수) 작업.
 - 검색엔진에 최적화? 의미있는 태그를 사용했는가? <header>, <section>, <footer>, <article> 태그처럼 html5부터 만들어진 태그처럼 html5 부터 만들어진 태그를 사용하면, 구글 검색에 잘 노출됩니다.
