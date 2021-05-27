@@ -26,7 +26,7 @@
 - 관리자단 AdminLTE적용.(회원관리CRUD, 게시판CRUD, 대시보드)
 
 #### 20210526(수) 작업.
-- 검색엔진에 최적화? 의미있는 태그를 사용했는가? <header>, <section>, <footer>, <article> 태그처럼 html5부터 만들어진 태그
+- 검색엔진에 최적화? 의미있는 태그를 사용했는가? <header>, <section>, <footer>, <article> 태그처럼 html5부터 만들어진 태그처럼 html5 부터 만들어진 태그를 사용하면, 구글 검색에 잘 노출됩니다.
 - 유효성검사? Validation 입력 값이 제대로 되었는 지 확인하는 과정.
 - html5 내장 유효성검사? required(공백체크), type="email"(이메일형식체크), type="password"(입력 값을 숨김 처리),
 - js로 유효성검사? 비밀번호 확인(2개 입력 값을 체크)
