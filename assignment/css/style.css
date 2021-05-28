@@ -1,5 +1,6 @@
 .display {
-    background-color: rgb(201, 201,201);
+    background-color: black;
+    color: white;
     padding: 15px;
     width: 250px;
     text-align: right;
