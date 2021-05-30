@@ -1,10 +1,10 @@
 function forclear() {
-    document.getElementById("output").innerHTML = "0";
+    document.getElementById("output").innerHTML ="0";
 }
-function removeZero() {
+function removeZero(){
     var value = document.getElementById("output").innerHTML;
     if (value == "0") {
-        value = ""
+        value = " "
         document.getElementById("output").innerHTML = value;
     }
 }
@@ -16,7 +16,6 @@ function perc() {
 function fordisplay(value) {
     removeZero()
     document.getElementById("output").innerHTML += value;
-    // +=연산자: 우측의 연산자의 값을 변수에 더하는 연산자
 }
 function solve() {
     removeZero()
