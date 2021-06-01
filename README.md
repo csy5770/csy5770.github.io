@@ -9,6 +9,7 @@
 - ERD기준으로 게시판UI 마무리합니다.
 - 관리자단 AdminLTE적용-스프링시간|UI디자인시간 선택 후 아래 작업진행예정
 - (회원관리CRUD-html, 게시판생성관리CRUD-html)
+- html을 분해(1개의 페이지를 2개로 분해, header.jsp(메뉴공통), footer.jsp(공통))
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root파일까지)로 배치
 - 스프링 작업의 시작
 
